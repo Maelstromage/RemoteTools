@@ -2,7 +2,7 @@ $HKEY = 2147483651
 $computer = "usblnd0150"
 
 
-$explorer = Get-WmiObject -ComputerName $ComputerName -Class win32_process | where {$_.name -eq "explorer.exe"}
+$explorer = Get-WmiObject -ComputerName $Computer -Class win32_process | where {$_.name -eq "explorer.exe"}
 $sid = ($explorer.GetOwnerSid()).sid
 $user  = $explorer.GetOwner()
 
