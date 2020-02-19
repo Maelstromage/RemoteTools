@@ -28,21 +28,11 @@ if(Test-Connection $computer -Quiet -Count 1){
                         New-ItemProperty -Path $regPath -PropertyType DWORD -Name "ProviderType" -Value 131072
                         New-ItemProperty -Path $regPath -PropertyType String -Name "RemotePath" -Value $driveLocation
                         New-ItemProperty -Path $regPath -PropertyType DWORD -Name "UserName" -Value 0
-
-
-                        
-
-
-
-
                     }
-
-
-
                 }
-
             }
         }
     }else{Write-host "Explorer.exe is not running on $computer" -ForegroundColor Red}
 }else{Write-host "Could not connect to $computer" -ForegroundColor Red}
 Write-host "Please have user log off and log on"
+read-host "Press Enter to Continue"
