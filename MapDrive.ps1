@@ -1,4 +1,5 @@
 #fill in computer driveLetter and DriveLocation
+#Please have user log off and log on after complete
 $computer = "Computer"
 $driveLetter = "L"
 $driveLocation = "\\server\share"
@@ -44,3 +45,4 @@ if(Test-Connection $computer -Quiet -Count 1){
         }
     }else{Write-host "Explorer.exe is not running on $computer" -ForegroundColor Red}
 }else{Write-host "Could not connect to $computer" -ForegroundColor Red}
+Write-host "Please have user log off and log on"
