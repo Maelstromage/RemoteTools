@@ -1,7 +1,7 @@
-#New-PSDrive HKU Registry HKEY_USERS
-$computer = ""
+#fill in computer driveLetter and DriveLocation
+$computer = "Computer"
 $driveLetter = "L"
-$driveLocation = "\\usblns-file2\get"
+$driveLocation = "\\server\share"
 if(Test-Connection $computer -Quiet -Count 1){
     Write-Output "`r`nComputer: $computer"
     $explorer = Get-WmiObject -ComputerName $Computer -Class win32_process | where {$_.name -eq "explorer.exe"}
